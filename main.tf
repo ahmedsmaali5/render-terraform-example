@@ -12,10 +12,10 @@ provider "render" {
 }
 
 resource "render_static_site" "example" {
-  name          = "render-terraform-example"
+  name          = "render-terraform-example-try6"
   repo_url      = "https://github.com/ahmedsmaali5/render-terraform-example"
   branch        = "main"
-  build_command = "" # no build needed for html file
+  build_command = "" # no build needed for html file, ---- ken 3ana container we prepare Dockerfile
   publish_path  = "."
 
 }
