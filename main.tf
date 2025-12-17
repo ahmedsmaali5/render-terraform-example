@@ -9,17 +9,15 @@ terraform {
 }
 
 provider "render" {
-  # Credentials via environment variables (set in GitHub secrets)
 }
 
 resource "render_static_site" "example" {
-  name     = "render-terraform-example"
-  repo_url = "https://github.com/ahmedsmaali5/render-terraform-example"
-  branch   = "main"
-  build_command = ""  # no build needed for html file
+  name          = "render-terraform-example"
+  repo_url      = "https://github.com/ahmedsmaali5/render-terraform-example"
+  branch        = "main"
+  build_command = "" # no build needed for html file
   publish_path  = "."
 
-#  region = "oregon"  # ----------- this is free
 }
 
 output "site_url" {
